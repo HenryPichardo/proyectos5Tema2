@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Listado de Peliculas : ";
+}
+@model IEnumerable<ProyectoPropuestoPractica5.Models.Producto>
+
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th></th>
+        <th>
+            DESCRIPCION
+        </th>
+        <th></th>
+        <th>
+            PRECIO
+        </th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <th></th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <th></th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <th></th>
+            
+        </tr>
+
+    }
+</table>
